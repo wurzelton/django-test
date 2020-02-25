@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form method="POST"> {% csrf_token %}
+    {{ form.as_p }} <!-- automatically render the form fields out, that are defined in forms.py, then created an instance and being added to context in the views.py -->
+                    <!-- could also say form.as_ul oder so. mit as_p erstellt die label-input Paare jeweils in eigenem <p> -Abschnitt -->
+    <input type="submit" value="Save" />
+
+</form>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- {{ object_list }} -->
+<h2>ID und Titel des Eintrages: {{ object.id }} - {{ object.title }}</h2>
+
+<p>Blogeintrag: {{ object.content }}</p>
+<p>Active: {{ object.active }}</p>
+<p>Datum der Erstellung: {{ object.entry_date }}</p>
+
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- {{ object_list }} -->
+<h2>Hier eine Liste aller Blog-Einträge</h2>
+<p>ID - Blogtitel</p>
+
+{% for instance in object_list %}
+<p><a href="/blog/{{ instance.id }}/">{{ instance.id }} - {{ instance.title }}</a></p>
+<!-- <p><a href="{{ instance.get_absolute_url }}">{{ instance.id }} - {{ instance.title }}</a></p>  -->
+
+{% endfor %}
+
+{% endblock %}
